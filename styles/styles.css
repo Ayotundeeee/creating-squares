@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border: 5px solid black;
+  margin: 40px 40px 40px 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn {
+  background-color: rgb(4, 4, 36);
+  color: white;
+  padding: 1em 4em;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 7px 5px;
+}
+#btn:hover {
+  cursor: pointer;
+}
+#btn:active {
+  transform: scale(0.95);
+  transition: 15ms;
+}
+
+.square1 {
+  position: absolute;
+  border-radius: 5px solid red;
+}
+
+/*# sourceMappingURL=styles.css.map */
