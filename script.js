@@ -41,6 +41,7 @@ button.addEventListener("click", (e)=>{
     squareList.push(newSquare);
 })
 
+// generate random colors.
 function randomColor(){
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
