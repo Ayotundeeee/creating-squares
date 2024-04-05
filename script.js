@@ -16,7 +16,7 @@ button.addEventListener("click", (e)=>{
     newSquare.style.height = "100%";
     newSquare.style.border = `10px solid ${randomColor()}`;
     
-    // make condition for determining to which element newSquare will be appended.
+    // set condition for determining to which element newSquare will be appended.
     if(squareList.length === 0){
         container.appendChild(newSquare);
     }
@@ -29,9 +29,12 @@ button.addEventListener("click", (e)=>{
         let lastSize = lastSquare.getBoundingClientRect();
         let minSize = button.getBoundingClientRect();
 
-        //prevent new squares if minSize has been reached.
+        //prevent new squares if minSize has been reached and clear.
         if (lastSize.width < minSize.width || lastSize.height < minSize.height) {
-            return;
+            container.children[1].remove();
+
+        // reset to start creating new squares without having to refresh page.
+            squareList.length = 0;
         }
         squareList[squareList.length - 1].appendChild(newSquare);
             
